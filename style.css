@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 /* reset to base styles */
 html,
 body,
@@ -149,4 +151,91 @@ select {
     text-rendering: optimizeLegibility;
 }
 
+
+
+body {
+
+    font-family: Work Sans;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+    background-color: #000;
+    padding-top: 104px;
+}
+
+header nav>a{
+
+    text-decoration: none;
+    color: #fff;
+    margin-left: 10px;
+}
+
+header {
+
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 
+}
+header h1 {
+
+    float: left;
+    width: 64px;
+}
+header nav{
+    float: right;
+    margin-top: 20px;
+}
+
+.selected:hover {
+
+    border-bottom: solid 2px #fff;
+    padding-bottom: 3px;
+}
+
+.photo {
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+    margin: 10px;
+}
+
+.small {
+
+    width: 200px;
+}
+.large {
+
+    width: 400px;
+}
+
+footer {
+
+    overflow: hidden;
+    padding: 20px;
+}
+footer p {
+    float: left;
+}
+footer nav{
+    
+    float: right;
+}
+
+footer nav a{
+    width: 16px;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+footer nav img {
+
+ 
+}
+
+.photos {
+    text-align: center;
+}
 
