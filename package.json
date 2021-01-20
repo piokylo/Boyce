@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/piokylo/Boyce/issues"
   },
-  "homepage": "https://github.com/piokylo/Boyce#readme"
+  "homepage": "https://github.com/piokylo/Boyce#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
