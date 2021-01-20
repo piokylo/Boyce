@@ -1,0 +1,19 @@
+{
+  "name": "boyce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piokylo/Boyce.git"
+  },
+  "author": "Sean Kiely",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/piokylo/Boyce/issues"
+  },
+  "homepage": "https://github.com/piokylo/Boyce#readme"
+}
