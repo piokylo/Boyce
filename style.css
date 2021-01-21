@@ -163,7 +163,7 @@ body {
     padding-top: 104px;
 }
 
-header nav>a{
+a{
 
     text-decoration: none;
     color: #fff;
@@ -178,7 +178,8 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 
+    padding: 20px;
+    z-index: 2;
 }
 header h1 {
 
@@ -190,17 +191,34 @@ header nav{
     margin-top: 20px;
 }
 
-.selected:hover {
 
-    border-bottom: solid 2px #fff;
+header nav a {
+
+    transition: border 0.3s ease-in;
+    border-bottom: solid 2px rgba(0,0,0,0);
     padding-bottom: 3px;
+
+}
+header nav a:hover {
+
+    border-color: #555;
+  
+    
+
+
+}
+header nav a.selected  {
+
+    border-color:  #fff;
+
 }
 
 .photo {
-    display: inline-block;
+  
     vertical-align: top;
     width: 200px;
     margin: 10px;
+    position: relative;
 }
 
 .small {
@@ -234,6 +252,123 @@ footer nav a{
  
 
 .photos {
-    text-align: center;
+    max-width: 960px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
 }
 
+.overlay {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(5,5,5, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 2;
+}
+
+.photo:hover .overlay {
+
+    opacity: 1;
+  
+}
+
+.overlay > h2{
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    line-height: 1.2;
+    font-size: 26px;
+}
+
+.photo img {
+
+    transition: filter .3s ease;
+}
+
+.photo:hover img{
+    filter: grayscale(50%);
+}
+
+
+
+
+
+.list a {
+
+    margin-left: 0;
+}
+.list a:after {
+    content: '/';
+}
+.list a img {
+    opacity: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+  
+  .list {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 38px;
+    line-height: 1.2;
+    margin-top: 120px;
+    text-align: center;
+    padding: 20px;
+  }
+  
+
+  .list a:last-child:after {
+    content: "";
+  }
+  
+  .list a:hover img {
+    opacity: 1;
+  }
+
+
+  #list {
+      height: 100vh;
+    }
+
+#list footer {
+  position: sticky;
+  height: 100px;
+  padding: 20px;
+  top: calc( 100vh - 100px );
+  }
+#list footer p{
+
+    margin-top: 30px;
+  }
+  
+#list footer nav {
+
+    margin-top: 23px;
+  }
+  
+
+  @media (max-width:480px) {
+
+    .list a {
+        display: block;
+    }
+  }
+ 
+
+  
+ 
